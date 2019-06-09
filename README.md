@@ -15,15 +15,15 @@ const addBankBudget = person => person.bankBudget
 const aggregateFns = (...fns) => (acc, value) =>
   acc += fns.reduce((sum, fn) => sum += fn(value), 0)
 
-const selectedSumFns = aggregateFns(
+const sumFns = aggregateFns(
   addUserBudget,
   addBankBudget
 )
 
-const result = people.reduce((acc, person) =>
-  selectedSumFns(acc, person), 0)
+const sumBudgets = people.reduce((acc, person) =>
+  sumFns(acc, person), 0)
 
-console.log(result)
+console.log(sumBudgets)
 ```
 
 
