@@ -1,4 +1,4 @@
-## Multiple sum functions example:
+### Multiple sum functions example:
 
 ```
 const people = [
