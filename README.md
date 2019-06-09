@@ -1,9 +1,6 @@
 ## Multiple Sum Functions example:
 
 ```
-const addAmount = person => person.amount
-const addAge = person => person.age
-
 const people = [
   { name: 'Krystian', age: 25, amount: 300 },
   { name: 'Mateusz', age: 30, amount: 500 },
@@ -12,9 +9,11 @@ const people = [
   { name: 'Sebastian', age: 38, amount: 3000 }
 ]
 
+const addAmount = person => person.amount
+const addAge = person => person.age
 
-const aggregateFns = (...fns) => (acc, person) =>
-  acc += fns.reduce((sum, sumFn) => sum += sumFn(person), 0)
+const aggregateFns = (...fns) => (acc, value) =>
+  acc += fns.reduce((sum, fn) => sum += fn(value), 0)
 
 const selectedSumFns = aggregateFns(
   addAmount,
