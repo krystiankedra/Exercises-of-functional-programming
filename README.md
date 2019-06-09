@@ -14,7 +14,7 @@ const people = [
 
 
 const aggregateFns = (...fns) => (acc, person) =>
-  acc += fns.reduce((sum, fn) => sum += fn(person), 0)
+  acc += fns.reduce((sum, sumFn) => sum += sumFn(person), 0)
 
 const selectedSumFns = aggregateFns(
   addAmount,
