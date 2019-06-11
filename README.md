@@ -88,7 +88,7 @@ const chainPersonWithSkills = skills => person => {
 const result = people.map(chainPersonWithSkills(skills))
 ```
 
-### Unique values in the table
+### Unique values in the table on the right
 ```
 const numbers = [ [3,4], [3,5], [1,2], [3,4], [5,6], [3,2], [2,1] ]
 
