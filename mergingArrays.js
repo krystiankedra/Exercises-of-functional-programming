@@ -25,4 +25,4 @@ const chainPersonWithSkills = skills => person => {
   return person
 }
 
-const result = people.map(chainPersonWithSkills(skills))
+const mergedArrays = people.map(chainPersonWithSkills(skills))

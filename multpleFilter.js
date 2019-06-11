@@ -6,9 +6,9 @@ const people = [
   { name: 'Sebastian', age: 38, amount: 3000 }
 ]
 
-const phrase = 'an',
-  searchedAge = 30,
-  searchedAmount = 3000
+const phrase = 'an'
+const searchedAge = 30
+const searchedAmount = 3000
 
 const filterByName = value => person => person.name.toLowerCase().includes(value.toLowerCase())
 const filterByAge = value => person => person.age >= value

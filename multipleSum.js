@@ -1,4 +1,3 @@
-
 const people = [
   { name: 'Krystian', bankBudget: 200, userBudget: 300 },
   { name: 'Mateusz', bankBudget: 300, userBudget: 500 },
@@ -18,5 +17,5 @@ const sumFns = aggregateFns(
   addBankBudget
 )
 
-const sumBudgets = people.reduce((acc, person) =>
+const calculatedBudgets = people.reduce((acc, person) =>
   acc += sumFns(person), 0)
