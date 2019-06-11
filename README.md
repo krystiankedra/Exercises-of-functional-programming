@@ -22,8 +22,6 @@ const sumFns = aggregateFns(
 
 const sumBudgets = people.reduce((acc, person) =>
   sumFns(acc, person), 0)
-
-console.log(sumBudgets)
 ```
 
 
@@ -55,8 +53,6 @@ const criteria = conditionsFns(
 )
 
 const filteredPeople = people.filter(criteria)
-
-console.log(filteredPeople)
 ```
 
 ### Merging two arrays
@@ -90,6 +86,15 @@ const chainPersonWithSkills = skills => person => {
 }
 
 const result = people.map(chainPersonWithSkills(skills))
+```
 
-console.log(result)
+### Unique values in the table
+```
+const numbers = [ [3,4], [3,5], [1,2], [3,4], [5,6], [3,2], [2,1] ]
+
+const concatArray = (acc, val) => acc.concat(val)
+const setUniqValues = array => [...new Set(array)]
+
+const reducer = numbers.reduceRight((acc, val) => concatArray(acc, val), [])
+const uniqNumbers = setUniqValues(reducer)
 ```
