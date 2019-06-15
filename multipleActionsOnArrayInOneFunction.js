@@ -9,7 +9,7 @@ const people = [
 const searchedPhrase = 'an'
 const userBudgetIsMoreThan = 500
 const bankBudgetIsMoreThan = 250
-const multplyValue = 5;
+const multplyValue = 5
 const addValue = 1000
 
 const multiplyBankBudget = value => person => {
